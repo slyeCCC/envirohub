@@ -8,7 +8,7 @@ CS 125H - Lab 5
 	Black: #000000
 	White: #FFFFFF
 	Dark Green: #051F00
-	Pakistan Green: #093500
+	Pakistan Green: #495C47
 	Office Green: #187306
 	Kelly Green: #318717
 	Cambridge Blue: #697A66
@@ -16,7 +16,7 @@ CS 125H - Lab 5
 	
 */
 
-/* Base Formatting */
+/* Reset Styles */
 *{
 	margin: 0;
 	padding: 0;
@@ -24,7 +24,7 @@ CS 125H - Lab 5
 }
 
 header, section, article {
-	margin: 1em;
+	margin: 0;
 	padding: 1em;
 	background-color: #C4D7C0;
 }
@@ -35,21 +35,29 @@ header, section, article {
 }
 
 nav {
-	padding:.5em;
-	display:flex;
-	justify-content:center;
+	
+	display: inline-flex;
 	position: fixed;
 	width:100%;
 	top: 0;
-	background-color: #C4D7C0;
+	background-color: #FFFFFF;
 	z-index: 1000;
 }
 
-nav p {
-	text-align:center;
-	width: 23%;
+nav ul {
+	list-style: none;
 	margin:0;
-	display: inline-block;
+	padding: 0;
+}
+nav li {
+	text-align:center;
+	margin:0;
+	display:inline-block;
+}
+nav a img {
+	width: 35px;
+	height:45px;
+	display: block;
 }
 a:link {
 	color: #093500;
@@ -69,9 +77,12 @@ article {
 	float: left;
 	text-align: center;
 	margin: 1% 2.4% 3%;
-	border: 1px solid #051F00;
+	border: 1px hidden #051F00;
+	box-shadow:1px 1px 2px 2px #697A66;
 	border-radius: 1em;
-	background-color: #FFFFFF
+	background-color: #FFFFFF;
+	display: inline-block;
+	box-sizing: border-box;
 }
 
 /* the styles for the elements */
@@ -87,16 +98,17 @@ header {
 header h1 {
 	text-align: center;
 	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000;
 	font-size: 200%;
-	background-color: #697A66;
+	background-color: #495C47;
 	margin: 0;
-	
-	
+	box-sizing: border-box;
 }
 header img {
 	width: 100%;
 	height: 200px;
-	border-radius: .9em .9em 0 0
+	border-radius: .9em .9em 0 0;
+	box-sizing: border-box;
 }
 
 /* the styles for the main content */
@@ -123,14 +135,21 @@ main p {
 	line-height: 120%;
 	margin-top: 0;
 }
-
+main img {
+	
+	box-sizing: border-box;
+}
 /* the styles for the footer */
 footer {
+	width:100%;
 	height: 40px;
 	line-height: 20px;
 	text-align: center;
 	color: #FFFFFF;
-	background-color: #697A66;
+	text-shadow: 1px 1px 1px #000000;
+	background-color: #495C47;
 	padding: 5px 10px;
-	margin-bottom: .1em;
+	position:static;
+	bottom: 0;
+	box-sizing: border-box;
 }
